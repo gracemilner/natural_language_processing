@@ -11,12 +11,12 @@ This script takes a CSV of tweet text as input and performs simple cleaning (rem
 Takes csv input with two columns, Tweet (text) and Relevance (1-3), produces output table with location names extracted from the tweets. New entry for each unique location name in each tweet. Additionally counts the occurences of each unique location name after grouping by R type.
 
 Workflow: 
-    - Setup includes loading and defining punctuation and loading SpaCy model
-    - Defines function to use SpaCy NLP entity detection to extract location names, only including each unique location once and excluding punctuation
-    - Defines function to process tweets using above function and generate output table 
-    - Uses the functions with input file
-    - Groups results by relevance types and counts occurrences of unique location names for each group
-    - Exports to excel files
+- Setup includes loading and defining punctuation and loading SpaCy model
+- Defines function to use SpaCy NLP entity detection to extract location names, only including each unique location once and excluding punctuation
+- Defines function to process tweets using above function and generate output table 
+- Uses the functions with input file
+- Groups results by relevance types and counts occurrences of unique location names for each group
+- Exports to excel files
 
 ### geotag_vs_text_locations
 Location name extraction from only geotagged tweets. Retains city and state info from the geotagged data, and adds the GPE extracted from the text. Adds column to show if the GPE is different from the city or state obtained from geotagged data. 
